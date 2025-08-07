@@ -1,0 +1,270 @@
+<!--
+This is a completely new and redesigned landing page for Creator Connect.
+It replaces the old website with a more colorful and dynamic user experience.
+
+Key features of this new design:
+- A vibrant, gradient hero section with a bold call to action.
+- A JavaScript-powered canvas that creates interactive, pseudo-3D shapes.
+- Clicking on the shapes reveals details about the agency's services.
+- A clean, modern services section and a clear contact area at the bottom.
+- The "Schedule a Meeting" button has been replaced with a simple contact section.
+- All contact information (email, phone number) is updated to your details.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Connect</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .hero-gradient {
+            background-image: linear-gradient(to right top, #00c6ff, #0072ff);
+        }
+        #interactive-canvas {
+            touch-action: none;
+        }
+        .info-card {
+            display: none;
+            position: absolute;
+            max-width: 300px;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center justify-center text-center text-white p-4">
+        <div class="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6">
+                Creator Connect
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                Building powerful partnerships that amplify voices and inspire audiences. Let's create something unforgettable together.
+            </p>
+            <a href="#contact" class="inline-block bg-white text-indigo-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Interactive Section -->
+    <section id="interactive" class="py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Explore Our Services</h2>
+            <p class="text-lg text-gray-600 mb-10">
+                Click on the shapes below to discover how we connect creators and brands.
+            </p>
+            <div class="relative flex justify-center items-center h-96 w-full max-w-4xl mx-auto">
+                <canvas id="interactive-canvas" class="rounded-lg shadow-xl bg-white"></canvas>
+                <div id="info-card-1" class="info-card bg-white rounded-lg shadow-xl p-4 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-indigo-600 mb-2">Creator Management</h3>
+                    <p class="text-sm text-gray-700">We manage brand outreach and logistics so you can focus on creating.</p>
+                </div>
+                <div id="info-card-2" class="info-card bg-white rounded-lg shadow-xl p-4 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-indigo-600 mb-2">Brand Partnerships</h3>
+                    <p class="text-sm text-gray-700">Data-driven matching to connect your brand with the right creators.</p>
+                </div>
+                <div id="info-card-3" class="info-card bg-white rounded-lg shadow-xl p-4 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-indigo-600 mb-2">Campaign Strategy</h3>
+                    <p class="text-sm text-gray-700">Expert-led campaign planning from start to finish for maximum ROI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10">What We Do</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-indigo-600 mb-2">For Creators</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        We help you find the perfect brands that align with your values and audience. We handle the outreach, negotiation, and logistics so you can focus on what you do best: creating incredible content. Our goal is to secure long-term, meaningful partnerships.
+                    </p>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-indigo-600 mb-2">For Brands</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Gain access to a curated network of authentic, high-impact creators. We use data-driven insights to match your brand with creators whose audiences are highly engaged and perfectly suited for your products and message. We manage campaigns from start to finish for maximum ROI.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Connect?</h2>
+            <p class="text-lg mb-8">
+                Let's discuss how we can help you achieve your goals. Reach out today to start the conversation.
+            </p>
+            <div class="space-y-4">
+                <p class="text-xl font-bold">Email</p>
+                <a href="mailto:zack.rice@outlook.com" class="text-lg text-indigo-300 hover:underline">zack.rice@outlook.com</a>
+                <p class="text-xl font-bold pt-4">Phone Number</p>
+                <a href="tel:+19495263945" class="text-lg text-indigo-300 hover:underline">+1 (949) 526-3945</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 text-center p-4">
+        <p>&copy; 2024 Creator Connect. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Interactive Canvas -->
+    <script>
+        const canvas = document.getElementById('interactive-canvas');
+        const ctx = canvas.getContext('2d');
+        const infoCards = {
+            1: document.getElementById('info-card-1'),
+            2: document.getElementById('info-card-2'),
+            3: document.getElementById('info-card-3')
+        };
+        let shapes = [];
+        let hoverShape = null;
+
+        const resizeCanvas = () => {
+            const container = canvas.parentElement;
+            canvas.width = container.clientWidth;
+            canvas.height = container.clientHeight;
+            createShapes();
+        };
+
+        const createShapes = () => {
+            shapes = [
+                {
+                    id: 1,
+                    x: canvas.width * 0.2,
+                    y: canvas.height * 0.5,
+                    size: 50,
+                    color: '#088395',
+                    hovered: false,
+                    path: new Path2D(),
+                    baseY: canvas.height * 0.5
+                },
+                {
+                    id: 2,
+                    x: canvas.width * 0.5,
+                    y: canvas.height * 0.5,
+                    size: 60,
+                    color: '#05BFDB',
+                    hovered: false,
+                    path: new Path2D(),
+                    baseY: canvas.height * 0.5
+                },
+                {
+                    id: 3,
+                    x: canvas.width * 0.8,
+                    y: canvas.height * 0.5,
+                    size: 55,
+                    color: '#00FFCA',
+                    hovered: false,
+                    path: new Path2D(),
+                    baseY: canvas.height * 0.5
+                }
+            ];
+            shapes.forEach(shape => updateShapePath(shape));
+        };
+
+        const updateShapePath = (shape) => {
+            const offset = shape.hovered ? 10 : 0;
+            shape.path = new Path2D();
+            shape.path.moveTo(shape.x - shape.size / 2, shape.y - shape.size / 2 - offset);
+            shape.path.lineTo(shape.x + shape.size / 2, shape.y - shape.size / 2 - offset);
+            shape.path.lineTo(shape.x + shape.size / 2, shape.y + shape.size / 2 + offset);
+            shape.path.lineTo(shape.x - shape.size / 2, shape.y + shape.size / 2 + offset);
+            shape.path.closePath();
+        };
+
+        const draw = () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            shapes.forEach(shape => {
+                ctx.fillStyle = shape.color;
+                ctx.shadowColor = 'rgba(0, 0, 0, 0.2)';
+                ctx.shadowBlur = shape.hovered ? 20 : 5;
+                ctx.shadowOffsetY = shape.hovered ? 10 : 2;
+                ctx.fill(shape.path);
+            });
+            requestAnimationFrame(draw);
+        };
+
+        const getMousePos = (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+            const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+            return {
+                x: clientX - rect.left,
+                y: clientY - rect.top
+            };
+        };
+
+        const handleInteraction = (e) => {
+            const pos = getMousePos(e);
+            let found = null;
+            shapes.forEach(shape => {
+                if (ctx.isPointInPath(shape.path, pos.x, pos.y)) {
+                    found = shape;
+                }
+            });
+
+            if (found && found !== hoverShape) {
+                if (hoverShape) {
+                    hoverShape.hovered = false;
+                    updateShapePath(hoverShape);
+                }
+                found.hovered = true;
+                updateShapePath(found);
+                hoverShape = found;
+            } else if (!found && hoverShape) {
+                hoverShape.hovered = false;
+                updateShapePath(hoverShape);
+                hoverShape = null;
+            }
+
+            canvas.style.cursor = found ? 'pointer' : 'default';
+        };
+
+        const handleClick = (e) => {
+            const pos = getMousePos(e);
+            let clickedShape = null;
+            shapes.forEach(shape => {
+                if (ctx.isPointInPath(shape.path, pos.x, pos.y)) {
+                    clickedShape = shape;
+                }
+            });
+
+            if (clickedShape) {
+                Object.values(infoCards).forEach(card => card.style.display = 'none');
+                const card = infoCards[clickedShape.id];
+                card.style.display = 'block';
+                card.style.left = `${clickedShape.x}px`;
+                card.style.top = `${clickedShape.y - clickedShape.size / 2 - 80}px`;
+            } else {
+                Object.values(infoCards).forEach(card => card.style.display = 'none');
+            }
+        };
+
+        window.addEventListener('resize', resizeCanvas);
+        canvas.addEventListener('mousemove', handleInteraction);
+        canvas.addEventListener('touchmove', handleInteraction);
+        canvas.addEventListener('click', handleClick);
+        window.onload = function() {
+            resizeCanvas();
+            draw();
+        };
+    </script>
+</body>
+</html>
